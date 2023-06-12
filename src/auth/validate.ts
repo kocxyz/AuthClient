@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { KOCServerUrl } from '../types/connection';
 
 export type ValidateResponse = {
   /**
@@ -16,9 +17,9 @@ export type ValidateResponse = {
  * 
  * @returns 
  */
-export function validate(baseUrl: string, username: string, authToken: string) {
+export function validate(baseUrl: string, server: KOCServerUrl, authToken: string) {
   return axios.post<ValidateResponse>(`${baseUrl}/auth/validate`, {
-    username: username,
+    server: server,
     authkey: authToken,
   });
 }
