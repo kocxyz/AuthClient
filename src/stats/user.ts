@@ -5,7 +5,7 @@ export type KOCUser = {
   /**
    * The User Id
    */
-  id: number;
+  id: string;
   /**
    * The username of the account associated.
    */
@@ -32,6 +32,6 @@ export type KOCUser = {
  * 
  * @returns The users information.
  */
-export function getUser(baseUrl: string, userId: number) {
+export function getUser(baseUrl: string, userId: string) {
   return axios.get<KOCUser>(`${baseUrl}/stats/user/${userId}`);
 }
