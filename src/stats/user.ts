@@ -26,12 +26,24 @@ export type KOCUser = {
 
 /**
  * Get information and stats about a specific user.
- * 
+ *
  * @param baseUrl The Auth Server base URL.
  * @param userId The Discord UserId of the user.
- * 
+ *
  * @returns The users information.
  */
-export function getUser(baseUrl: string, userId: string) {
-  return axios.get<KOCUser>(`${baseUrl}/stats/user/${userId}`);
+export function getUserById(baseUrl: string, userId: string) {
+  return axios.get<KOCUser>(`${baseUrl}/stats/user/id/${userId}`);
+}
+
+/**
+ * Get information and stats about a specific user.
+ *
+ * @param baseUrl The Auth Server base URL.
+ * @param username The Brawler username of the user.
+ *
+ * @returns The users information.
+ */
+export function getUserByUsername(baseUrl: string, username: string) {
+  return axios.get<KOCUser>(`${baseUrl}/stats/user/username/${username}`);
 }
