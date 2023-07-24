@@ -2,22 +2,24 @@ import axios from 'axios';
 import type { KOCServer } from './servers';
 
 export type KOCUser = {
-  /**
-   * The User Id
-   */
-  id: string;
-  /**
-   * The username of the account associated.
-   */
-  username: string;
-  /**
-   * The registration date.
-   */
-  registeredat: string;
-  /**
-   * The last login date.
-   */
-  lastlogin: string;
+  user: {
+    /**
+     * The User Id
+     */
+    id: string;
+    /**
+     * The username of the account associated.
+     */
+    username: string;
+    /**
+     * The registration date.
+     */
+    registeredat: string;
+    /**
+     * The last login date.
+     */
+    lastlogin: string;
+  };
   /**
    * A list of servers that are hosted by the user.
    */
