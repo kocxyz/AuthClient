@@ -24,10 +24,6 @@ export type KOCServer = {
    */
   region: 'EU' | 'NA';
   /**
-   * @deprecated Use `maxPlayers` instead.
-   */
-  maxplayers: number;
-  /**
    * The Discord Id of the owner.
    */
   owner: string;
@@ -43,9 +39,9 @@ export type KOCServer = {
 
 /**
  * Get all registered public servers.
- * 
+ *
  * @param baseUrl The Auth Server base URL.
- * 
+ *
  * @returns The information for the public servers.
  */
 export function getServers(baseUrl: string) {

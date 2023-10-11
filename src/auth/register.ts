@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export type RegisterResponse = {
   /**
-   * The username of the account
+   * The username of the account.
    */
   username: string;
   /**
@@ -10,6 +10,10 @@ export type RegisterResponse = {
    * This is required to e.g. generate session tokens.
    */
   authToken: string;
+  /**
+   * The users patreon tier.
+   */
+  premium: 0
 };
 
 /**
